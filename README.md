@@ -1,69 +1,142 @@
 # 💰 Tikin | Assistente Financeiro Inteligente & Segurança Digital
 
-O **Tikin** é um assistente financeiro pessoal inteligente construído com **Python**, **Streamlit** e a **API do Gemini** (via o SDK oficial `google-genai`). 
+> **Um tikin daqui, outro tikin dali. No fim, faz diferença.**
 
-Projetado como solução para o desafio da **DIO**, o Tikin combina **Context Injection (Injeção de Contexto)** com **guardrails de segurança digital** para oferecer orientação financeira personalizada, análise de despesas, sugestões de investimento e proteção contra golpes cibernéticos.
+O **Tikin** é um assistente financeiro pessoal inteligente construído com **Python**, **Streamlit** e a **API do Gemini**, utilizando o SDK oficial `google-genai`.
 
----
+O nome Tikin nasceu de uma ideia simples e bem brasileira: guardar **um tikin daqui, outro tikin dali**. Pequenas decisões financeiras, quando entendidas e acompanhadas ao longo do tempo, podem fazer diferença.
 
-## 🎯 Objetivo do Projeto
-
-Capacitar o cliente bancário a tomar melhores decisões financeiras e proteger-se contra fraudes digitais através de uma interface de conversa simples, empática e contextualizada.
+Desenvolvido como solução para um desafio da **DIO**, o projeto combina **Context Injection**, inteligência artificial e **guardrails de segurança digital** para criar uma experiência de orientação financeira mais clara, contextualizada e próxima do usuário.
 
 ---
 
-## 💡 Problema que Resolve
+## 🎯 A ideia por trás do projeto
 
-1. **Falta de visibilidade financeira clara**: Dificuldade em analisar gastos mensais categorizados e identificar oportunidades de economia.
-2. **Dúvida na escolha de investimentos**: Incerteza sobre qual produto financeiro se adequa ao perfil de risco e aos objetivos pessoais (ex: construção de reserva de emergência).
-3. **Vulnerabilidade a golpes digitais**: Exposição crescente a engenharia social, Golpe do Pix, falso funcionário de banco, boletos adulterados e phishing por SMS/e-mail.
+Dinheiro costuma envolver duas coisas que nem sempre andam juntas: **informação e tranquilidade**.
 
----
+É fácil olhar para uma lista de gastos e não saber o que fazer com ela. Também é comum ter dúvidas sobre investimentos, reserva de emergência ou sobre como reconhecer uma tentativa de golpe.
 
-## 👤 Público-Alvo
+A proposta do Tikin é transformar esses dados e dúvidas em uma conversa mais simples.
 
-Clientes bancários (representados no projeto pelo perfil de **João Silva**, Analista de Sistemas de perfil moderado) que buscam:
-- Organizar seu orçamento mensal;
-- Construir ou validar sua reserva de emergência;
-- Entender opções de renda fixa e multimercado;
-- Tirar dúvidas sobre segurança bancária e prevenção de fraudes.
+Em vez de apenas apresentar informações, o assistente utiliza o contexto disponível do cliente para ajudar a interpretar sua situação financeira e orientar suas próximas decisões.
 
 ---
 
-## 🚀 Funcionalidades Implementadas
+## 💡 O problema que o Tikin aborda
 
-- **💬 Chat Financeiro Interativo**: Interface gráfica completa desenvolvida em Streamlit.
-- **📊 Análise Personalizada de Despesas**: Leitura e interpretação dos gastos recentes de Outubro.
-- **📈 Recomendação de Investimentos**: Sugestões de produtos (Tesouro Selic, CDB Liquidez Diária, Fundo Multimercado Moderado, Tesouro IPCA+) alinhadas ao perfil moderado do cliente.
-- **🛡️ Orientação de Segurança Digital**: Respostas e dicas preventivas contra golpes comuns e engenharia social.
-- **👤 Painel Lateral do Cliente**: Exibição dos dados do perfil (Renda, Patrimônio, Reserva Atual, Objetivo) e status da API Key.
-- **💡 Atalhos de Perguntas Rápidas**: Botões de um clique para consultas frequentes.
-- **🗑️ Gerenciamento de Sessão**: Opção para limpar a conversa e reiniciar o atendimento.
+O projeto foi pensado em torno de três situações:
+
+1. **Falta de clareza sobre os próprios gastos**  
+   Dificuldade para entender para onde o dinheiro está indo e identificar oportunidades de organização.
+
+2. **Dúvidas sobre investimentos**  
+   Incerteza sobre quais produtos podem fazer sentido considerando perfil de risco e objetivos financeiros.
+
+3. **Vulnerabilidade a golpes digitais**  
+   Situações como phishing, falso funcionário de banco, golpes envolvendo Pix e outras formas de engenharia social exigem informação e atenção.
+
+O Tikin conecta esses três pontos em uma única experiência conversacional.
 
 ---
 
-## 🏛️ Arquitetura e Tecnologias
+## 👤 Público-alvo
 
-### Tecnologias Utilizadas
-- **Linguagem**: Python 3.10+
-- **Interface Web**: Streamlit
-- **SDK LLM**: `google-genai` (SDK oficial do Google GenAI)
-- **Modelo de IA**: `gemini-3.6-flash`
-- **Manipulação de Dados**: Pandas
-- **Configuração de Ambiente**: Python-Dotenv
-- **Testes Automatizados**: Unittest (com suporte a Mocks)
+O projeto utiliza como referência um cliente fictício, **João Silva**, Analista de Sistemas com perfil de investidor moderado.
 
-### Estratégia de Context Injection (Sem RAG / Sem Banco Vetorial)
-O Tikin adota a abordagem de **Context Injection Puro**:
-Os 5 arquivos de dados locais em formato JSON e CSV são lidos em tempo de execução por `src/dados.py` e formatados em uma estrutura de texto legível. Essa estrutura é injetada diretamente no `system_instruction` do Gemini durante a inicialização do agente.
+A experiência foi pensada para pessoas que querem:
+
+- Organizar melhor o orçamento;
+- Entender seus gastos;
+- Construir ou acompanhar uma reserva de emergência;
+- Conhecer opções de renda fixa e multimercado;
+- Tirar dúvidas sobre segurança bancária;
+- Reconhecer situações potencialmente fraudulentas.
+
+---
+
+## 🚀 Funcionalidades implementadas
+
+- **💬 Chat financeiro interativo** — interface conversacional desenvolvida em Streamlit.
+- **📊 Análise personalizada de despesas** — leitura e interpretação dos gastos recentes de outubro.
+- **📈 Orientação sobre investimentos** — informações sobre produtos como Tesouro Selic, CDB com liquidez diária, Fundo Multimercado Moderado e Tesouro IPCA+, considerando o perfil do cliente fictício.
+- **🛡️ Orientação de segurança digital** — dicas preventivas contra golpes e engenharia social.
+- **👤 Painel do cliente** — exibição de informações do perfil, como renda, patrimônio, reserva atual e objetivo.
+- **💡 Atalhos de perguntas rápidas** — acesso facilitado a consultas frequentes.
+- **🗑️ Gerenciamento de sessão** — possibilidade de limpar a conversa e iniciar um novo atendimento.
+
+---
+
+## 🧠 Como o Tikin funciona
+
+Uma das principais decisões técnicas do projeto foi utilizar **Context Injection Puro**, sem RAG ou banco vetorial.
+
+Os dados disponíveis no projeto são carregados localmente por `src/dados.py`, organizados e incorporados ao contexto enviado ao modelo.
+
+Isso permite que o Gemini receba informações sobre o cliente, suas transações, produtos financeiros, histórico de atendimento e orientações de segurança antes de responder.
 
 ```text
-[Arquivos Locais (JSON/CSV)] ➡️ [dados.py] ➡️ [System Prompt (prompts.py)] ➡️ [Gemini API (agente.py)]
+[Dados locais]
+      ↓
+[dados.py]
+      ↓
+[System Prompt + Guardrails]
+      ↓
+[Gemini API]
+      ↓
+[Resposta contextualizada]
 ```
+
+A escolha foi intencional: para o escopo do desafio, essa abordagem mantém a arquitetura simples, transparente e fácil de compreender.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🛡️ Segurança desde o início
+
+Como o Tikin trabalha com informações financeiras, segurança faz parte da própria arquitetura da solução.
+
+O projeto utiliza **guardrails no System Prompt** para:
+
+- Reduzir riscos de *Prompt Injection*;
+- Impedir solicitações de senhas, CVVs, tokens e códigos SMS;
+- Evitar exposição da `GEMINI_API_KEY`;
+- Restringir o assistente ao escopo financeiro e de segurança digital;
+- Tratar erros da API sem expor informações sensíveis.
+
+A preocupação não foi apenas fazer o assistente responder bem, mas também definir **o que ele não deve pedir, revelar ou fazer**.
+
+---
+
+## 🏛️ Tecnologias utilizadas
+
+- **Python 3.10+**
+- **Streamlit**
+- **Google GenAI SDK (`google-genai`)**
+- **Gemini**
+- **Pandas**
+- **Python-Dotenv**
+- **Unittest + Mocks**
+
+---
+
+## 🧪 Validação
+
+O projeto possui uma suíte de **12 testes unitários**, cobrindo os principais módulos da aplicação.
+
+Resultado da execução local:
+
+```text
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.028s
+
+OK
+```
+
+A aplicação também foi validada quanto à importação do `app.py` e à organização da estrutura do projeto.
+
+---
+
+## 📁 Estrutura do projeto
 
 ```text
 Tikin/
@@ -85,7 +158,6 @@ Tikin/
 │   ├── seguranca.md
 │   ├── testes-e-metricas.md
 │   └── pitch.md
-│   
 ├── src/                        # Código-fonte dos módulos
 │   ├── __init__.py
 │   ├── config.py
@@ -98,88 +170,110 @@ Tikin/
 
 ---
 
-## 🛠️ Como Configurar e Executar Localmente
+## 🛠️ Como executar localmente
 
-### 1. Clonar o Repositório e Acessar a Pasta
+### 1. Clonar o repositório
+
 ```bash
 git clone https://github.com/danieli-dutra/tikin-agent.git
 cd tikin-agent
 ```
 
-### 2. Ativar o Ambiente Virtual Python
+### 2. Criar e ativar o ambiente virtual
+
 No Windows:
+
 ```bash
+python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 3. Instalar as Dependências
+### 3. Instalar as dependências
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configurar a Chave da API Gemini
-Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
+### 4. Configurar a API do Gemini
+
+Crie um arquivo `.env` na raiz do projeto com base no `.env.example`:
+
 ```env
-GEMINI_API_KEY=sua_chave_real_aqui
+GEMINI_API_KEY=sua_chave_aqui
 ```
 
-### 5. Executar a Aplicação Web
+> A chave não deve ser commitada. O arquivo `.env` está protegido pelo `.gitignore`.
+
+### 5. Executar a aplicação
+
 ```bash
 streamlit run app.py
 ```
-Acesse o endereço exibido no terminal (geralmente `http://localhost:8501`).
 
----
+Acesse o endereço exibido pelo Streamlit, normalmente:
 
-## 🧪 Como Executar os Testes Automatizados
-
-A suíte de testes unitários roda localmente sem consumir cota da API do Gemini:
-
-```bash
-python -m unittest discover -s tests
-```
-
-**Resultado Esperado:**
 ```text
-............
-----------------------------------------------------------------------
-Ran 12 tests in 0.028s
-
-OK
+http://localhost:8501
 ```
 
 ---
 
 ## 🔐 Cuidados com a `GEMINI_API_KEY`
 
-- **Sigilo Absoluto**: O arquivo `.env` está incluído no `.gitignore` e jamais deve ser commitado no repositório.
-- **Mascaramento de Exceções**: O módulo `src/agente.py` trata erros de API sem expor o valor da chave em logs ou na tela.
-- **Proteção do Cliente**: O assistente é programado via System Prompt para jamais solicitar senhas, códigos SMS, tokens ou CVVs dos usuários.
+- O arquivo `.env` está incluído no `.gitignore`.
+- A chave não é armazenada no código-fonte.
+- Os erros da API são tratados sem expor informações sensíveis.
+- O assistente possui instruções para não solicitar senhas, CVVs, tokens ou códigos SMS.
 
 ---
 
-## ❓ Exemplos de Perguntas para o Tikin
+## ❓ Exemplos de perguntas
 
-1. *"Pode fazer uma análise rápida das minhas despesas de outubro?"*
-2. *"Qual o melhor produto financeiro disponível para o meu perfil moderado?"*
-3. *"Como posso me proteger do Golpe do Pix?"*
-4. *"Minha reserva de emergência atual de R$ 10.000 é suficiente para a minha renda mensal?"*
+```text
+"Pode fazer uma análise rápida das minhas despesas de outubro?"
 
----
+"Quais opções de investimento fazem sentido para o meu perfil moderado?"
 
-## ⚠️ Limitações Atuais
+"Como posso me proteger do Golpe do Pix?"
 
-- **Escopo Baseado no Perfil João Silva**: A base de dados local atual é estruturada para o cliente fictício cadastrado.
-- **Sem Persistência de Banco de Dados Relacional**: Os históricos de conversa mantêm-se na memória de sessão do Streamlit durante a navegação.
-- **Sem Integração Bancária em Tempo Real**: As transações são lidas a partir da base estática local em CSV.
+"Minha reserva de emergência atual é suficiente para a minha renda?"
+```
 
 ---
 
-## 📄 Documentação Adicional
+## ⚠️ Limitações atuais
 
-Para mais detalhes sobre a implementação do projeto, consulte a pasta `docs/`:
+O Tikin é um projeto desenvolvido para um cenário controlado e possui algumas limitações:
+
+- **Perfil fictício:** os dados atuais são estruturados para o cliente de demonstração João Silva.
+- **Sem banco de dados relacional:** o histórico da conversa permanece na memória da sessão do Streamlit.
+- **Sem integração bancária em tempo real:** as transações utilizadas pelo assistente vêm de uma base local em CSV.
+- **Sem recomendação financeira automatizada para clientes reais:** as orientações apresentadas fazem parte do cenário demonstrativo do projeto.
+
+---
+
+## 📚 Documentação
+
+A pasta `docs/` contém a documentação complementar do projeto:
+
 - 📐 [Arquitetura do Sistema](docs/arquitetura.md)
 - 🤖 [Agente e Prompts](docs/agente-e-prompts.md)
 - 🛡️ [Diretrizes de Segurança](docs/seguranca.md)
 - 🧪 [Testes e Métricas](docs/testes-e-metricas.md)
 - 📢 [Pitch de Apresentação](docs/pitch.md)
+
+---
+
+## 👩‍💻 Sobre o projeto
+
+O Tikin nasceu como um desafio técnico, mas acabou se tornando também um exercício de produto.
+
+A intenção foi juntar algumas coisas que fazem sentido para mim: **tecnologia, experiência do usuário, inteligência artificial e resolução de problemas reais**.
+
+Durante o desenvolvimento, a preocupação não ficou apenas em fazer a aplicação funcionar. Também entraram na conta arquitetura, segurança, testes, documentação e, principalmente, a experiência de quem estaria do outro lado da tela.
+
+No fim, a ideia continua sendo a mesma do nome:
+
+> **Um tikin daqui, outro tikin dali. Pequenas decisões também constroem grandes resultados.**
+
+---
