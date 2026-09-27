@@ -86,8 +86,7 @@ Tikin/
 │   ├── testes-e-metricas.md
 │   └── pitch.md
 ├── references/                 # Guias de referência e segurança
-│   ├── KipperDev-Guia-Seguranca-Vibe-Coding.pdf
-│   └── _pdf_extracted.txt
+│   └── KipperDev-Guia-Seguranca-Vibe-Coding.pdf
 ├── src/                        # Código-fonte dos módulos
 │   ├── __init__.py
 │   ├── config.py
@@ -104,7 +103,8 @@ Tikin/
 
 ### 1. Clonar o Repositório e Acessar a Pasta
 ```bash
-cd d:\DIO\Tikin
+git clone https://github.com/danieli-dutra/tikin-agent.git
+cd tikin-agent
 ```
 
 ### 2. Ativar o Ambiente Virtual Python
@@ -123,7 +123,6 @@ Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
 ```env
 GEMINI_API_KEY=sua_chave_real_aqui
 ```
-*(Caso prefira, você também pode informar a chave diretamente pela barra lateral da interface Streamlit).*
 
 ### 5. Executar a Aplicação Web
 ```bash
