@@ -1,4 +1,4 @@
-# 🧪 Testes e Resultados — Tikin
+# 🧪 Testes e Resultados | Tikin
 
 Este documento apresenta a suíte de testes unitários automatizados do projeto **Tikin**, a metodologia de validação utilizada e os resultados reais de execução.
 

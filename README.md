@@ -85,8 +85,7 @@ Tikin/
 │   ├── seguranca.md
 │   ├── testes-e-metricas.md
 │   └── pitch.md
-├── references/                 # Guias de referência e segurança
-│   └── KipperDev-Guia-Seguranca-Vibe-Coding.pdf
+│   
 ├── src/                        # Código-fonte dos módulos
 │   ├── __init__.py
 │   ├── config.py
