@@ -1,16 +1,20 @@
 # 📢 Pitch de Apresentação | Tikin
 
-> **Tikin: um assistente financeiro inteligente que ajuda a cuidar do bolso e da segurança digital.**
+> **Tikin: um assistente financeiro inteligente para cuidar do bolso e da segurança digital, um tikin de cada vez.**
 
 ---
 
 ## 🎯 O desafio
 
-A ideia do Tikin nasceu de uma percepção simples: lidar com dinheiro no dia a dia já pode ser complicado, e fazer isso com segurança em um ambiente cada vez mais digital adiciona outra camada de preocupação.
+A ideia do Tikin nasceu de uma percepção simples: **lidar com dinheiro no dia a dia pode ser complicado.**
 
-O cliente precisa entender para onde o dinheiro está indo, tomar decisões financeiras mais conscientes e, ao mesmo tempo, reconhecer situações que podem colocar seus dados e seu dinheiro em risco.
+Entender para onde o dinheiro está indo, decidir o que fazer com o que sobra, pensar em investimentos e ainda se proteger de golpes digitais são desafios que fazem parte da vida financeira de muita gente.
 
-Foi pensando nessa combinação que surgiu o Tikin.
+E nem sempre o problema é falta de informação.
+
+Às vezes, é justamente o excesso dela.
+
+Foi pensando nisso que surgiu o Tikin: uma forma de transformar dados financeiros e inteligência artificial em uma conversa mais simples, contextualizada e próxima do cliente.
 
 ---
 
@@ -18,18 +22,20 @@ Foi pensando nessa combinação que surgiu o Tikin.
 
 O **Tikin** é um assistente financeiro pessoal construído com **Python**, **Streamlit** e a **API do Gemini**, utilizando o SDK oficial `google-genai`.
 
-A proposta não é simplesmente entregar números ou respostas prontas. O Tikin usa o contexto do cliente para transformar dados financeiros em uma conversa mais clara e próxima.
+A proposta não é simplesmente entregar números ou respostas prontas.
+
+O Tikin recebe o contexto do cliente e usa essas informações para transformar dados em uma conversa que faça sentido para aquela pessoa.
 
 Ele pode:
 
-- **Analisar despesas** e apresentar os gastos de forma simples;
-- **Orientar sobre investimentos** considerando o perfil e os objetivos do cliente;
-- **Ajudar na organização financeira**, especialmente em relação à reserva de emergência;
-- **Orientar sobre segurança digital**, explicando como reconhecer golpes e situações de engenharia social.
+- **📊 Analisar despesas** e mostrar de forma mais clara para onde o dinheiro está indo;
+- **📈 Orientar sobre investimentos** considerando o perfil e os objetivos do cliente;
+- **💰 Apoiar a organização financeira**, incluindo questões relacionadas à reserva de emergência;
+- **🛡️ Orientar sobre segurança digital**, ajudando a reconhecer golpes e situações de engenharia social.
 
 ---
 
-## 🧠 Como o Tikin funciona
+## 🧠 Contexto antes da resposta
 
 Uma das decisões técnicas do projeto foi utilizar **Context Injection Puro**, sem RAG ou banco vetorial.
 
@@ -55,6 +61,8 @@ Essa abordagem foi escolhida porque atende ao escopo do desafio de forma simples
 
 Como o Tikin trabalha com informações financeiras, segurança não poderia ser tratada como um detalhe.
 
+Ela faz parte da própria construção do assistente.
+
 O projeto incorpora **guardrails no System Prompt** para:
 
 - reduzir riscos de *Prompt Injection*;
@@ -63,27 +71,35 @@ O projeto incorpora **guardrails no System Prompt** para:
 - restringir o assistente ao seu escopo financeiro e de segurança digital;
 - tratar erros da API sem expor informações sensíveis.
 
-A preocupação aqui foi construir não apenas um assistente que responde, mas um assistente que também sabe **o que não deve pedir ou revelar**.
+A preocupação foi construir um assistente que não apenas sabe **o que responder**, mas também **o que não deve pedir ou revelar**.
 
 ---
 
-## 🚀 Diferenciais da solução
+## 🚀 O que torna o Tikin diferente?
 
 ### 1. Contexto antes de resposta
 
-O Tikin não recebe apenas uma pergunta isolada. Ele recebe o contexto necessário para compreender o cenário daquele cliente.
+O Tikin não recebe apenas uma pergunta isolada.
+
+Ele recebe informações sobre o cliente, seus objetivos, transações e contexto para produzir respostas mais relevantes para aquele cenário.
 
 ### 2. Finanças + segurança digital
 
-A proposta une dois problemas que fazem parte da mesma experiência bancária: cuidar do dinheiro e saber protegê-lo.
+Cuidar do dinheiro também significa saber protegê-lo.
+
+Por isso, o Tikin combina orientação financeira com educação sobre golpes, phishing, engenharia social e segurança bancária.
 
 ### 3. Vibe Coding com responsabilidade
 
-O projeto foi desenvolvido utilizando IA como parte do processo de construção, mas com preocupação em validar código, testar funcionalidades, documentar decisões e aplicar princípios de segurança.
+A inteligência artificial fez parte do processo de desenvolvimento, mas não substituiu a validação.
 
-### 4. Interface simples e conversacional
+O projeto foi construído com revisão de código, testes automatizados, documentação das decisões técnicas e preocupação com segurança.
 
-A interface em Streamlit foi pensada para reduzir a barreira entre o usuário e as informações financeiras, utilizando conversa e atalhos rápidos em vez de exigir que o cliente saiba exatamente onde procurar cada informação.
+### 4. Uma experiência simples e conversacional
+
+Em vez de obrigar o usuário a descobrir onde encontrar cada informação, o Tikin coloca a conversa no centro da experiência.
+
+A ideia é diminuir a distância entre **“eu tenho uma dúvida”** e **“agora eu entendi o que está acontecendo”.**
 
 ---
 
@@ -94,7 +110,7 @@ O projeto possui uma suíte automatizada com **12 testes unitários**, cobrindo 
 Resultado da última execução local:
 
 ```text
-............ 
+............
 ----------------------------------------------------------------------
 Ran 12 tests in 0.028s
 
@@ -105,12 +121,36 @@ Além dos testes, a aplicação também foi validada quanto à importação do `
 
 ---
 
-## 🎤 Por que Tikin?
+## ✨ Por que Tikin?
 
-O nome e a proposta representam uma ideia que guiou o projeto desde o começo: **tornar uma relação que muitas vezes é complicada mais simples e mais humana**.
+O nome nasceu de uma ideia simples:
 
-A tecnologia aqui não é o objetivo final.
+> **ajudar a pessoa a entender melhor seu dinheiro, um tikin de cada vez.**
 
-Ela é o meio para transformar dados, contexto e inteligência artificial em uma experiência que ajude o cliente a entender melhor suas próprias decisões financeiras e a navegar pelo ambiente digital com mais segurança.
+Porque cuidar da vida financeira não precisa começar com uma grande mudança.
 
-Esse é o Tikin.
+Pode começar entendendo um gasto.
+
+Organizando uma escolha.
+
+Criando uma pequena reserva.
+
+Ou simplesmente fazendo uma pergunta.
+
+**Um tikin de cada vez.**
+
+Esse conceito acabou guiando não apenas o nome, mas também a proposta do produto: tornar uma relação que muitas vezes parece complicada mais simples, próxima e compreensível.
+
+---
+
+## 💜 O que o Tikin representa
+
+Para mim, tecnologia não deveria ser o objetivo final.
+
+Ela é o meio.
+
+O objetivo é transformar dados, contexto e inteligência artificial em uma experiência que ajude o cliente a entender melhor suas próprias decisões financeiras e a navegar pelo ambiente digital com mais segurança.
+
+O Tikin nasceu de uma ideia pequena, mas com uma proposta muito prática:
+
+**ajudar a cuidar do dinheiro, um tikin de cada vez.**
