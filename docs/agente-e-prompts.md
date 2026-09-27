@@ -1,4 +1,4 @@
-# 🤖 Agente e Engenharia de Prompts — Tikin
+# 🤖 Agente e Engenharia de Prompts | Tikin
 
 Este documento detalha a definição da persona do assistente **Tikin**, a estrutura do System Prompt, o mecanismo de injeção de contexto e os guardrails comportamentais aplicados.
 
