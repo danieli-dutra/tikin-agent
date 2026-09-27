@@ -1,4 +1,4 @@
-# 📐 Arquitetura do Sistema — Tikin
+# 📐 Arquitetura do Sistema | Tikin
 
 Este documento descreve a arquitetura de software, o fluxo de dados e os módulos funcionais do assistente financeiro **Tikin**.
 
