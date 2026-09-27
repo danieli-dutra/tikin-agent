@@ -1,4 +1,4 @@
-# 🛡️ Diretrizes de Segurança — Tikin
+# 🛡️ Diretrizes de Segurança | Tikin
 
 O projeto **Tikin** foi desenvolvido incorporando princípios de **Vibe Coding Seguro** inspirados no *Guia de Segurança KipperDev*. Este documento descreve as proteções implementadas no código, no tratamento de dados e nas instruções do modelo.
 
