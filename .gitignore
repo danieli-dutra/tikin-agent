@@ -1,0 +1,19 @@
+# Variáveis de ambiente
+.env
+
+# Ambiente virtual Python
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Streamlit
+.streamlit/
+
+# Temporários
+references/_pdf_extracted.txt
+*.tmp

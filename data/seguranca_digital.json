@@ -1,0 +1,42 @@
+{
+  "golpes_comuns": [
+    {
+      "nome": "Golpe do falso funcionário de banco",
+      "descricao": "Criminoso liga se passando por funcionário do banco, pede dados pessoais, senhas ou códigos de autenticação. Bancos nunca pedem senha por telefone.",
+      "como_se_proteger": "Desligue e ligue para o número oficial do banco. Nunca forneça senhas ou códigos por telefone."
+    },
+    {
+      "nome": "Golpe do Pix",
+      "descricao": "Criminoso usa engenharia social para convencer a vítima a fazer uma transferência Pix, seja por WhatsApp clonado, falso sequestro ou falsa promoção.",
+      "como_se_proteger": "Confirme a identidade por outro canal antes de transferir. Desconfie de urgência excessiva."
+    },
+    {
+      "nome": "Golpe do boleto falso",
+      "descricao": "Boleto adulterado com dados bancários do criminoso. O pagamento vai para a conta errada.",
+      "como_se_proteger": "Confira o beneficiário antes de pagar. Prefira gerar boletos diretamente no site oficial."
+    },
+    {
+      "nome": "Phishing por e-mail ou SMS",
+      "descricao": "Mensagem falsa com link que imita o site do banco para roubar dados de login. Pode vir por e-mail, SMS ou WhatsApp.",
+      "como_se_proteger": "Não clique em links de mensagens. Acesse o banco digitando o endereço no navegador ou pelo app oficial."
+    }
+  ],
+  "boas_praticas": [
+    "Use senhas fortes e diferentes para cada serviço",
+    "Ative a autenticação em dois fatores (2FA) sempre que disponível",
+    "Nunca compartilhe senhas, tokens ou códigos de verificação com ninguém",
+    "Mantenha o aplicativo do banco atualizado",
+    "Verifique o endereço do site antes de digitar seus dados",
+    "Desconfie de ofertas muito vantajosas ou de urgência para agir",
+    "Em caso de dúvida, entre em contato pelos canais oficiais do banco",
+    "Monitore regularmente suas transações e ative notificações"
+  ],
+  "o_que_nunca_compartilhar": [
+    "Senha do banco ou de aplicativos financeiros",
+    "Código de verificação recebido por SMS",
+    "Token de autenticação",
+    "Número completo do cartão de crédito",
+    "CVV (código de segurança do cartão)",
+    "CPF junto com outros dados pessoais em ligações não solicitadas"
+  ]
+}
