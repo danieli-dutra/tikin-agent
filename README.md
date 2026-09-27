@@ -1,4 +1,4 @@
-# 💰 Tikin — Assistente Financeiro Inteligente & Segurança Digital
+# 💰 Tikin | Assistente Financeiro Inteligente & Segurança Digital
 
 O **Tikin** é um assistente financeiro pessoal inteligente construído com **Python**, **Streamlit** e a **API do Gemini** (via o SDK oficial `google-genai`). 
 
